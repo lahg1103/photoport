@@ -1,0 +1,14 @@
+:root {
+    --padding-spacing: 0.5rem;
+    --margin-spacing: 0.5rem;
+    --obsidian: #000;
+    --chalk: #fcfcfc;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--chalk);
+}
