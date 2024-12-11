@@ -9,6 +9,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* generic */
 body {
     background-color: var(--chalk);
+    /* typography */
+    font-size: 1.12rem;
+}
+
+a {
+    all:unset;
+    color: inherit;
+}
+a:hover {
+    cursor: pointer;
+}
+button {
+    all: unset;
+}
+li::marker {
+    color: transparent;
+}
+
+/* classes */
+.underline-animated {
+    position: relative;
+    
+}
+.underline-animated::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 2px;
+    width: 0%;
+    background-color: #000;
+
+    transition: 500ms;
+}
+.underline-animated:hover::after {
+    width: 100%;
+}
+.underline-animated:not(:hover)::after {
+    width: 0%;
 }
