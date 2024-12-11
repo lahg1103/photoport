@@ -1,2 +1,2 @@
-# photoport
-Photography portfolio setup page
+#William Gail Photography & Design
+website is being developed by Leslie A. Hurtado.
