@@ -6,27 +6,62 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>William Gail Photography & Design</h1>
+    <header class="chalk-text difference">
+        <h1 class="logo-header uppercase">William Gail Photography & Design</h1>
+        <nav class="chalk-text">
+            <ul>
+                <li><a href="portfolio.html" class="underline-animated uppercase">Portrait</a></li>
+                <li><a href="book.html" class="underline-animated uppercase">Book</a></li>
+                <li><a href="about.html" class="underline-animated uppercase">About</a></li>
+                <li><a href="contact.html" class="underline-animated uppercase">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="portfolio.html" class="underline-animated uppercase">Portrait</a></li>
-            <li><a href="book.html" class="underline-animated uppercase">Book</a></li>
-            <li><a href="about.html" class="underline-animated uppercase">About</a></li>
-            <li><a href="contact.html" class="underline-animated uppercase">Contact</a></li>
-        </ul>
-    </nav>
+   
     <main>
         <div id="board">
-            <img src="" alt="">
+            <img src="photos/21stbirthday.jpg" alt="headshot" class="slide">
+            <img src="photos/Veil.jpg" alt="veil" class="slide hide">
+            <img src="photos/weddingReception.jpg" alt="wedding reception" class="slide hide">
+            <img src="photos/couplewithhorses.jpg" alt="horses" class="slide hide">
         </div>
     </main>
-    <footer>
+    <footer class="difference">
         <p class="copyright"> &copy; William Gail</p>
     </footer>
     <script>
+        function changeSlideDelay(s, d, sn) {
+            s.forEach((slide, i) => {
+                    setTimeout(() =>{
+                        slide.classList.toggle('hide');
+                        if ((i+1) == sn) {
+                            console.log(slide.alt);
+                            s[0].classList.toggle('hide');
+                        }
+                        else {
+                            s[i+1].classList.toggle('hide');
+                        }
+                }, (i+1) * d);
+                })
+        }
+        function changeSlide(slideshow, delayNum) {
+            
+            let slideNum = slideshow.length;
 
+            changeSlideDelay(slideshow, delayNum, slideNum);
+
+            setInterval(()=>{
+                changeSlideDelay(slideshow, delayNum, slideNum);
+            }, slideNum * delayNum);
+                
+            }
+        
+        window.addEventListener('DOMContentLoaded', ()=> {
+            // variable declaration
+            let slideshow = Array.from(document.querySelectorAll('.slide'));
+
+            changeSlide(slideshow, 3000);
+        })
     </script>
 </body>
 </html>
