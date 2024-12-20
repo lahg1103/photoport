@@ -1,5 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+@keyframes comeUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+}
 
 :root {
     --padding-spacing: 0.5rem;
@@ -81,6 +91,9 @@ ul {
 li::marker {
     color: transparent;
 }
+img {
+    max-width: 100%;
+}
 
 /* classes */
 .underline-animated {
@@ -126,8 +139,24 @@ li::marker {
 .hide {
     opacity: 0;
 }
+.hidden {
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+}
+.come-up-animation {
+    transform: translateY(500px);
+    animation: comeUp 1500ms ease forwards;
+}
+.screen {
+    mix-blend-mode: screen;
+}
 
 /* id */
+#logo {
+    padding-inline: 1rem;
+    padding-top: 2.5rem;
+}
 #board {
     display: grid;
     height: 100%;
