@@ -37,7 +37,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 20% 80%;
     position: relative;
     overflow: hidden;
 }
@@ -60,7 +60,8 @@ footer {
     display: flex;
     align-items: flex-end;
 
-    color: var(--graphite);
+    color: var(--obsidian);
+    cursor: default;
 }
 main {
     z-index: 0;
@@ -165,7 +166,7 @@ section {
     padding-inline: 1rem;
     padding-top: 2.5rem;
 }
-#board {
+#gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
