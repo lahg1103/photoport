@@ -170,4 +170,11 @@ img {
     min-width: 100%;
     min-height: 100%;
     transition: opacity 500ms;
+    object-fit: cover;
+}
+
+@media (width < 800px) {
+    #quince {
+        object-position: 100%;
+    }
 }
