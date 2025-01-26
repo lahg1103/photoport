@@ -165,11 +165,45 @@ section {
     padding-inline: 1rem;
     padding-top: 2.5rem;
 }
-#gallery {
+.gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
-#gallery img {
+.gallery img {
     background-color: #ccc;
+}
+.card {
+    position: relative;
+    height: 75vh;
+    overflow: scroll;
+}
+.card .gallery {
+    
+}
+.scroll {
+    overflow-y: scroll;
+}
+.center {
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+.headshot-container {
+    transition: 400ms ease;
+}
+.headshot-container:hover{
+    transform: scale(105%);
+}
+.footer-hero {
+    font-size: 3rem;
+    
+}
+.vertical-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
 }
