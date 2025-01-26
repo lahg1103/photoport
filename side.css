@@ -163,15 +163,28 @@ section {
     height: 1px;
     visibility: hidden;
 }
+.center {
+    text-align: center;
+}
 /* id */
 #logo {
     padding-inline: 1rem;
     padding-top: 2.5rem;
 }
+.card {
+    background-color: rgb(166, 189, 210);
+    text-align: center;
+}
+.card h2 {
+    margin-block: 1rem;
+    text-transform: uppercase;
+
+}
 .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-block: 1rem;
 }
 .gallery img {
     background-color: #ccc;
@@ -179,6 +192,13 @@ section {
 .vertical-text {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+}
+.divisor {
+    width: 30%;
+    height: 2px;
+    background-color: #ccc;
+    margin: auto;
+    mix-blend-mode: multiply;
 }
 
 @media screen and (max-width: 455px) {
