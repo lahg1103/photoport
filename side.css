@@ -22,9 +22,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    height: -webkit-fill-available;
+}
 /* generic */
 body {
+    min-height: -webkit-fill-available;
     background-color: var(--chalk);
     /* typography */
     font-family: 'Hanken Grotesk', sans-serif;
