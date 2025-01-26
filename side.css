@@ -173,11 +173,6 @@ section {
 .gallery img {
     background-color: #ccc;
 }
-.card {
-    position: relative;
-    height: 75vh;
-    overflow: scroll;
-}
 .vertical-text {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
@@ -215,9 +210,6 @@ section {
     bottom: 0;
 }
 @media screen and (max-width: 610px) {
-    main {
-        background-color: yellowgreen;
-    }
     .footer-hero {
         font-size: 1.5rem;
     }
